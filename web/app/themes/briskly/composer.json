@@ -1,0 +1,51 @@
+{
+  "name": "patahvyer/wp-timber-stack",
+  "description": "Starter theme to build a Timber theme",
+  "type": "wordpress-theme",
+  "minimum-stability": "stable",
+  "authors": [{
+    "name": "Patrick J",
+    "email": "pjavier@briskly.ca"
+  }],
+
+  "repositories": [{
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/houke/acf-icon-picker"
+    },
+    {
+			"type": "vcs",
+			"url": "git@github.com:pathavyer/dplugins.git"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.11",
+    "palmiak/timber-acf-wp-blocks": "^1.15",
+    "houke/acf-icon-picker": "dev-master",
+		"pathavyer/dplugins": "dev-master",
+    "wpackagist-plugin/timber-library": "^1.19",
+    "timber/timber": "^1.19"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "../plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ]
+    }
+  }
+}

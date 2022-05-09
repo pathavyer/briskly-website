@@ -1,0 +1,92 @@
+{# Setting media types #}
+{% if img %}
+{% set media = img %}
+{% elseif icon %}
+{% set media = icon %}
+{% endif %}
+
+{# Setting head tag #}
+{% if h2 %}
+{% set head = h2 %}
+{% elseif p %}
+{% set head = p %}
+{% endif %}
+
+{# Setting content type #}
+{% if body_plain %}
+{% set body = body_plain %}
+{% elseif body_wysiwyg %}
+{% set body = body_wysiwyg %}
+{% endif %}
+
+{# Setting footer content #}
+{% if btn %}
+{% set footer = btn %}
+{% elseif link %}
+{% set footer = link %}
+{% endif %}
+
+
+
+<div class="section__copy {{ content_class | join(" ") }}" bp="grid 12{{ cta ? " 6--max" }}">
+  {# media #}
+  {% if media %}
+  {% if icon %}
+  <div class="copy__icon {{ light ? "copy__icon--light" }}">
+    {# <img src="{{theme.path ~ "/src/assets/icons/" ~ icon ~ ".svg"}}" alt="{{ icon | replace({"-": " "}) }}">#}
+    <svg id="{{ icon }}">
+      <use xlink:href="#icon-{{icon}}"></use>
+    </svg>
+  </div>
+  {% elseif img %}
+  <div class="copy__media">
+    {% include "partial/media.twig" with {
+        img: {
+          url: "https://via.placeholder.com/50x50",
+          alt: "Default alt term"
+        }
+      } 
+    %}
+  </div>
+  {% endif %}
+
+  {# subhead #}
+  {% endif %}
+  {% if subhead %}
+  <div class="copy__subhead">
+    <p>{{ subhead }}</p>
+  </div>
+  {% endif %}
+
+  {# head #}
+  {% if head %}
+  <div class="copy__head">
+    {% if h2 %}
+    <h2>{{ h2 }}</h2>
+    {% elseif p %}
+    <p>{{ p }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {# body #}
+  {% if body %}
+  <div class="copy__body">
+    {% if body_plain %}
+    <p>{{ body_plain }}</p>
+    {% elseif body_wysiwyg %}
+    {{ body_wysiwyg }}
+    {% endif %}
+  </div>
+  {% endif %}
+
+
+  {# footer #}
+  {% if footer %}
+  <div class="copy__footer">
+    {% block cta %}
+      {% include "partial/cta.twig" %}
+    {% endblock cta %}
+  </div>
+  {% endif %}
+</div>
