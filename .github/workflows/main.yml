@@ -5,6 +5,7 @@ on:
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
+    permissions: write-all
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     strategy:
