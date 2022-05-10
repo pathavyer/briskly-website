@@ -48,3 +48,4 @@ jobs:
           **/.git*/**
           **/node_modules/**
           **/vendor/**
+          **/web/wp/wp-content/**

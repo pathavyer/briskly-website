@@ -97,15 +97,18 @@ class BrisklySite extends Timber\Site
 				add_filter('acf/settings/load_json', [$this, 'acf_json_load_point']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
         add_action('wp_enqueue_scripts', [$this, 'remove_wp_block_library_css'], 100);
-        // Render blocks
-        require_once( get_template_directory() . '/functions/register_acf_blocks.php' );
-		    require_once( get_template_directory() . '/functions/render_acf_blocks.php' );
-        // Load each block file
-        foreach(scandir(get_template_directory() . '/functions/blocks/') as $block ) {
-          if (strstr($block, '.php')) {
-            require_once( get_template_directory() . '/functions/blocks/' . $block );
+        // Render blocks if ACF is installed
+        if(class_exists('ACF')) {
+          require_once( get_template_directory() . '/functions/register_acf_blocks.php' );
+          require_once( get_template_directory() . '/functions/render_acf_blocks.php' );
+          // Load each block file
+          foreach(scandir(get_template_directory() . '/functions/blocks/') as $block ) {
+            if (strstr($block, '.php')) {
+              require_once( get_template_directory() . '/functions/blocks/' . $block );
+            }
           }
         }
+        
 
         parent::__construct();
     }
