@@ -50,7 +50,7 @@
     "houke/acf-icon-picker": "dev-master"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.6.0",
+    "squizlabs/php_codesniffer": "^3.7.0",
     "roave/security-advisories": "dev-master"
   },
   "config": {
