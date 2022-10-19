@@ -46,7 +46,7 @@
     "roots/wordpress": "6.0.3",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "timber/timber": "1.19.2",
+    "timber/timber": "1.20.0",
     "houke/acf-icon-picker": "dev-master"
   },
   "require-dev": {
