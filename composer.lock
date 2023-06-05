@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f95f17d42194fa00b275cb2b017f17a4",
+    "content-hash": "157878bad3b60aecc8ab3c508ac1a5a6",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -569,7 +569,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.0.3",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -600,16 +600,12 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.0.3"
+                "source": "https://github.com/roots/wordpress/tree/6.2.2"
             },
             "funding": [
                 {
                     "url": "https://github.com/roots",
                     "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/rootsdev",
-                    "type": "patreon"
                 }
             ],
             "time": "2022-06-01T16:54:37+00:00"
@@ -687,22 +683,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.0.3",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.0.3"
+                "reference": "6.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.0.3-no-content.zip",
-                "shasum": "39bb6da76aa5c28c4288593e0cd6a710cde7db6e"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.2.2-no-content.zip",
+                "shasum": "df066a16e97dd6ad5c1679d4a575983ea3143117"
             },
             "require": {
                 "php": ">= 5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "6.0.3"
+                "wordpress/core-implementation": "6.2.2"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -753,7 +749,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-10-17T22:55:15+00:00"
+            "time": "2023-05-20T04:31:46+00:00"
         },
         {
             "name": "roots/wp-config",
