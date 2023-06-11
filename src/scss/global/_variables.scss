@@ -1,3 +1,9 @@
+// Type
+$font-family-global: 'Rubik', sans-serif;
+$regular: 400;
+$bold: 500;
+$bolder: 600;
+
 // Media size
 $small: 720px;
 $medium: 960px;
@@ -11,14 +17,13 @@ $breakpoints: (
 
 
 // Spacing
-$xs-spacing: 8px;
-$sm-spacing: 16px;
-$md-spacing: 16px;
-$lg-spacing: 24px;
+$spacing--xs: 10px;
+$spacing--sm: 15px;
+$spacing--md: 25px;
+$spacing--lg: 40px;
 
 // Colors
-
-$color-primary: #2B6452;
+$color-primary: #F2A076;
 $color-primary--light:#5B9581;
 $color-primary--lighter:#8EC9B3;
 $color-primary--darkest:#003727;
@@ -27,12 +32,12 @@ $color-secondary--tint: #C2FFE8;
 $color-primary--pastel: #28423a;
 $color-primary--pastel-tint: #1d3931;
 // Text
-$text-color--light: $color-secondary;
-$text-color--dark: $color-primary--darkest;
-$link-color: $color-primary--light;
+$text-color--light: #fff;
+$text-color--dark: #4A4A4A;
+$link-color: $color-primary;
 
 // Button
-$button-color-primary: #ea847a;
+$button-color-primary: $color-primary;
 $button-color-secondary: $color-secondary;
 
 // Opacity
@@ -47,3 +52,5 @@ $image-shadow-inset: 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30p
 $image-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -15px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 // Card shadow
 $card-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+

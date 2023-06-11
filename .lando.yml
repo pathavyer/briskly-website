@@ -1,4 +1,4 @@
-name: briskly
+name: brisklywp
 recipe: wordpress
 
 config:

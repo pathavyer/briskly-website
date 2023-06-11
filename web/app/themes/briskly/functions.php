@@ -21,20 +21,6 @@ if (file_exists($composer_autoload)) {
   $timber = new Timber\Timber();
 }
 
-  
-
-// if (file_exists($composer_autoload)) {
-//   $timber = new Timber\Timber();
-  
-//   if (class_exists('Timber')) {
-//     // $timber = new Timber\Timber();
-// 		//If timber exsist - load Timber ACF Block
-//     if (class_exists('Timber_Acf_Wp_Blocks')) {
-//       new Timber_Acf_Wp_Blocks();
-//     }
-//   }
-// }
-
 
 /**
  * This ensures that Timber is loaded and available as a PHP class.
@@ -97,6 +83,7 @@ class BrisklySite extends Timber\Site
 				add_filter('acf/settings/load_json', [$this, 'acf_json_load_point']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
         add_action('wp_enqueue_scripts', [$this, 'remove_wp_block_library_css'], 100);
+        
         // Render blocks if ACF is installed
         if(class_exists('ACF')) {
           require_once( get_template_directory() . '/functions/register_acf_blocks.php' );
@@ -197,6 +184,11 @@ class BrisklySite extends Timber\Site
             'gallery',
             'caption',
         ]);
+
+        /*
+          disable wp defaults
+         */
+        require_once( get_template_directory() . '/functions/disable-wp-defaults.php' );
 
         /*
          * Enable support for Post Formats.

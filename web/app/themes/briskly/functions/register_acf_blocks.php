@@ -50,6 +50,8 @@ function briskly_allowed_block_types( $allowed_blocks, $post ) {
 			'acf/feature-why',
 			'acf/hero',
 			'acf/hero-alt',
+			'acf/multi-col-features',
+			'acf/slider-cards',
 			'acf/testimonial-carousel',
 		);
 	} else {

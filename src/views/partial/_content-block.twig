@@ -1,0 +1,48 @@
+{# eyebrow #}
+{% set eyebrow = eyebrow %}
+
+{# heading #}
+{% set heading = heading %}
+
+{# paragraph #}
+{% if text_plain %}
+  {% set paragraph = text_plain %}
+{% endif %}
+
+{% if text_rich %}
+  {% set paragraph = text_rich %}
+{% endif %}
+
+<div class="content__block">
+{% if eyebrow %}
+  <div class="eyebrow">
+    {% include "partial/_text.twig" with {
+      text_plain: eyebrow,
+    } %}
+  </div>
+{% endif %}
+
+{% if heading %}
+  <div class="heading">
+    {% include "partial/_heading.twig" with {
+    heading: {
+      tag: heading.tag,
+      text: heading.text,
+      classes: heading.classes,
+    }
+  } %}
+  </div>
+{% endif %}
+
+{% if paragraph %}
+<div class="paragraph">
+  {% if text_plain %}
+    <p>{{ text_plain }}</p>
+    {% elseif text_rich %}
+    {{ text_rich }}
+  {% endif %}
+</div>
+{% endif %}
+
+
+</div>

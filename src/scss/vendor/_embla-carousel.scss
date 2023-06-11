@@ -1,12 +1,25 @@
 .embla {
-  overflow: hidden;
-}
+  &__viewport {
+    overflow: hidden;
+    position: relative;
+  }
 
-.embla__container {
-  display: flex;
-}
+  &__container {
+    display: flex;
+    position: relative;
+    will-change: transform;
+  }
 
-.embla__slide {
-  position: relative;
-  flex: 0 0 100%;
+  &__slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  &__controls {
+    display: flex;
+    align-content: center;
+    margin-top: 1.5rem;
+    column-gap: 1rem;
+  }
 }

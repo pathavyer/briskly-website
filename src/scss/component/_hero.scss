@@ -7,22 +7,11 @@
   --gradient-color-4: #ffffff;
 }
 
-// #content {
-//   background-image:#ffffff;background-image:  
-//   radial-gradient(at 22% 4%, hsla(282,0%,100%,1) 0, transparent 52%),  
-//   radial-gradient(at 37% 43%,hsl(157, 100%, 88%) 0, transparent 27%),  
-//   radial-gradient(at 57% 62%, hsla(282,0%,100%,1) 0, transparent 54%),  
-//   radial-gradient(at 86% 35%, hsla(282,0%,100%,1) 0, transparent 48%),  
-//   radial-gradient(at 98% 4%, hsla(282,0%,100%,1)  0, transparent 21%),  
-//   radial-gradient(at 95% 80%,hsl(157, 100%, 88%) 0, transparent 50%);
-//   }
-
 .hero {
   position: relative;
   width: 100%;
   height: auto;
 	padding: 10rem 2.5rem;
-	margin-bottom: 5rem;
 
   @include media('medium') {
     padding-left: 4.5rem;
@@ -47,11 +36,6 @@
 
   &__copy {
     align-items: center;
-
-
-    h1 {
-      margin-bottom: 2.5rem;
-    }
   }
 
 }

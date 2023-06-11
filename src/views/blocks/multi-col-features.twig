@@ -1,0 +1,71 @@
+{#
+  Title: Multi Column Features
+  Description: Section to showcases features or services
+  Category: formatting
+  Icon: admin-comments
+  Keywords: features why us blocks
+  Mode: edit
+  Align: left
+  PostTypes: page post
+  SupportsAlign: center
+  SupportsMode: false
+  SupportsMultiple: true
+#}
+
+{% extends "partial/section-block.twig" %}
+
+{% set classes = ["multi-cols"] %}
+{% set columns = fields.multi_col_features.columns %}
+{% set btn = fields.multi_col_features.cta %}
+
+{% block content %}
+  <div bp="container">
+    <div bp="grid 12">
+      <div bp="margin-bottom--lg" class="grid--wrapper">
+        <div bp="grid 6@md">
+          {% include "partial/_content-block.twig" with {
+              eyebrow: fields.multi_col_features.eyebrow,
+              heading: {
+                tag: "h2",
+                text: fields.multi_col_features.heading
+              },
+              text_plain: fields.multi_col_features.paragraph,
+            } %}
+        </div>
+      </div>
+
+      <div class="grid--wrapper">
+        <div bp="grid {{ (columns|length > 1)? 12 / columns|length ~ '@md' : 12 }}">
+          {% for item in columns %}
+          <div class="grid__cols">
+            {% include "partial/_content-block.twig" with {
+                heading: {
+                  tag: "h4",
+                  text: item.heading
+                },
+                text_plain: item.paragraph,
+            } %}
+          </div>
+          {% endfor %}
+         
+        </div>
+      </div>
+
+      {% if btn %}
+      <div bp="margin-top--lg" class="grid--wrapper">
+        {% include "partial/cta.twig" with {
+          btn: {
+            type: "primary",
+            details: {
+              url: btn.url,
+              target: btn.target,
+              title: btn.title
+            }
+          }
+        } %}
+      </div>
+    </div>
+      {% endif %}
+
+  </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% set classes = classes %}
+
+{# TEXT #}
+{% if text_plain %}
+  <p{{(classes)?' class="'~ classes | join(' ') ~'"'}}>{{ text_plain }}</p>
+{% elseif text_rich %}
+  {{ text_rich }}
+{% endif %}
+

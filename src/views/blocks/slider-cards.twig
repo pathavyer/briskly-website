@@ -1,0 +1,39 @@
+{#
+  Title: Slider Cards
+  Description: Cards with slider
+  Category: formatting
+  Icon: admin-comments
+  Keywords: slider carousel cards
+  Mode: edit
+  Align: left
+  PostTypes: page post
+  SupportsAlign: center
+  SupportsMode: false
+  SupportsMultiple: true
+#}
+
+{% extends "partial/section-block.twig" %}
+
+{% block content %}
+  <div bp="container">
+    <div bp="grid vertical-start">
+      <div bp="5@md">
+        {% include "partial/_content-block.twig" with {
+              eyebrow: fields.slider_cards_content.eyebrow,
+              heading: {
+                tag: "h2",
+                text: fields.slider_cards_content.heading
+              },
+              text_plain: fields.slider_cards_content.paragraph,
+            } %}
+      </div>
+      <div bp="12 7@md">
+        {% include "blocks/carousel.twig" with {
+            carousel: true,
+            slides: fields.slider_cards 
+          } 
+        %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
