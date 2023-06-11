@@ -1,0 +1,13 @@
+.multi-cols {
+  .grid__cols {
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 4px;
+      border-top: 4px solid $text-color--dark;
+      margin-bottom: $spacing--xs;
+      border-radius: 3px;
+    }
+  }
+}

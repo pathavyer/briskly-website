@@ -1,0 +1,29 @@
+{% set heading = heading %}
+{% set paragraph = paragraph %}
+{% set carousel = carousel %}
+
+<div class="embla carousel">
+  <div class="embla__viewport">
+    <div class="embla__container">
+      {% for slide in slides %}
+        {% include "partial/_card.twig" with {
+        heading: {
+          text: slide.heading,
+        },
+        paragraph: slide.paragraph,
+      } %}
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <div class="embla__controls">
+    <div class="embla__button embla__button--prev">
+      <button>preview</button>
+    </div>
+    <div class="embla__button embla__button--next">
+      <button>next</button>
+    </div>
+  
+  </div>
+</div>

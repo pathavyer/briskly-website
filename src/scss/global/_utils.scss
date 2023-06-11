@@ -1,11 +1,61 @@
+// Text: Global utilities
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+
+// Content Block: Global utilities
+.content {
+  &__block {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing--sm;
+
+    @include media("medium") {
+      column-gap: $spacing--md;
+    }
+  }
+}
+
+// Section: Global utilities
 .section {
   &--wide {
     padding: 5rem 2.5rem;
+    position: relative;
 
     @include media("medium") {
-      padding: 7.5rem 4.5rem;
+      padding: 10rem 4.5rem;
     }
   }
+
+  &__guides {
+    display: grid;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    grid: 1fr/repeat(4, 1fr);
+    grid-gap: 2.5rem;
+    z-index: -1;
+
+    & .guide {
+      height: 100%;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(0,0,0, 0.1),rgba(0,0,0, 0.2) 50%,transparent 0,transparent);
+      background-size: 0.1rem 0.8rem;
+      opacity: 0.5;
+
+      &:last-of-type {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  //////////////////
 
   &__content {
     &[bp~="grid"] {
@@ -36,7 +86,7 @@
     &::after {
       content: "";
       background-color: $color-secondary--tint;
-      border-radius: 3px;
+      border-radius: 0.3rem;
       height: 100%;
       position: absolute;
       top: -5px;

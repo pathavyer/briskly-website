@@ -1,0 +1,13 @@
+{% set heading = heading %}
+{% set paragraph = paragraph %}
+{% set carousel = carousel %}
+
+<div class="card{{ (carousel)? " embla__slide" }}">
+{% include "partial/_content-block.twig"  with {
+    heading: {
+      tag: "h5",
+      text: heading.text,
+    },
+    text_plain: paragraph
+  } %}
+</div>

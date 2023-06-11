@@ -1,14 +1,14 @@
 @import "font-face";
 
 html {
-    font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-    color: $text-color--dark;
-   font-family: 'Lato'; 
-   font-weight: 300;
-   @include font-size(18, 26, normal);
+	color: $text-color--dark;
+	font-family: $font-family-global;
+	font-weight: $regular;
+	@include font-size(16, 28, normal);
 }
 
 h1,
@@ -16,49 +16,75 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Playfair Display';
-    font-weight: 300;
+	font-family: $font-family-global;
+	font-weight: $bolder;
 }
 
 h1 {
-    @include font-size(75, 85);
+	@include font-size(50);
+
+	@include media("medium") {
+		@include font-size(68);
+	   
+	}
+
+	@include media("large") {
+		@include font-size(82, 100);
+	}
 }
 
 h2 {
-    @include font-size(40);
+	@include font-size(42);
+
+	@include media("medium") {
+		@include font-size(57);
+	   
+	}
+
+	@include media("large") {
+		@include font-size(68, 76);
+	}
 }
 
 h3 {
-    @include font-size(28);
+	@include font-size(28, 52);
+
+	@include media("medium") {
+		@include font-size(35);
+	   
+	}
+
+	@include media("large") {
+		@include font-size(44, 52);
+	}
 }
 
 h4 {
-    @include font-size(22);
+	@include font-size(20, 32);
 }
 
 h5 {
-    @include font-size(18);
+	@include font-size(18, 30);
 }
 
 a {
-    color: $link-color;
-    text-decoration: none;
+	color: $link-color;
+	text-decoration: none;
 }
 
 // Font weight utils
-
 .bold {
-    font-weight: bold;
+	font-weight: $bold;
 }
 
 .bolder {
-    font-weight: 400;
+	font-weight: $bolder;
 }
 
 small {
-    @include font-size(14);
+	@include font-size(14);
 }
 
 strong {
-    font-weight: 500;
+	font-weight: $bold;
 }

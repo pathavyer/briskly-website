@@ -3,9 +3,28 @@
     "title": "Hero",
     "fields": [
         {
+            "key": "field_63b4be298b89f",
+            "label": "Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_6278c03aae694",
             "label": "Headline",
             "name": "hero_headline",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +44,7 @@
             "key": "field_6278c075ae695",
             "label": "Hero Subhead",
             "name": "hero_subhead",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -59,5 +79,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652081125
+    "modified": 1672789566
 }
