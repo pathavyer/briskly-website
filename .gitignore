@@ -5,7 +5,9 @@ web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
-web/app/*/dist/*
+web/app/themes/briskly/dist/*
+web/app/cache/
+
 
 # WordPress
 web/wp
